@@ -1,13 +1,9 @@
-# Project - Assignment 3.2 
+# Server Side
 
-## Server Side
+## Overview
+This is the server side of the website. We analyzed system requirements and constructed a complete API specification. The design followed RESTful principles and included all endpoints necessary. We implemented a server with real-time interaction with an SQL database and dynamic integration with the Spoonacular API.
 
-**Submitters**:
-* Noa Patchornik - 319123048  
-* Yaki Naftali - 318969177
-
-## Project Overview
-
+## Important data on our implementation
 * In our database, we decided to store recipe IDs as strings in a specific format: a numeric prefix followed by the suffix "ID" (e.g., "1ID", "2ID"..). This approach allows us to easily distinguish between recipes that originate from our own database and those fetched from the external Spoonacular API.
 The prefix numbers are assigned sequentially to ensure uniqueness and maintain order.
 
@@ -22,8 +18,7 @@ The prefix numbers are assigned sequentially to ensure uniqueness and maintain o
 * We used MySQL as our database. To create tables and insert initial data, we provided `.sql` scripts located in the `sql_scripts` directory.  
   For inserting users, we used Postman and sent a request to: `api/auth/register`.
 
-
-* `API_changes.txt` – a log file describing the changes made to the OpenAPI (YAML) specification since Assignment 3.1.
+* `API_changes.txt` – a text file describing the changes made to the OpenAPI (YAML) specification since the first specification.
 
 * We added our OpenAPI definition file (`openapi.yaml`) to the `dist/` directory so we could load it into Swagger and verify our server’s implementation matches the spec.
 
